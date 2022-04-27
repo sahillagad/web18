@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRONTEND</title>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+var datainvstor=JSON.parse(localStorage.getItem("investor"))
+
+
+datainvstor.forEach(function(elem) {
+    
+
+var divtag=document.createElement("div")
+document.querySelector("#cont").append(divtag)
+
+var imgtag=document.createElement("img")
+imgtag.setAttribute("src",elem.investorimg)
+divtag.append(imgtag)
+
+
+
+
+var h3tag=document.createElement("h3")
+h3tag.innerText=elem.investorName
+divtag.append(h3tag)
+
+
+
+
+
+var ptag=document.createElement("p")
+ptag.innerText=elem.investorRole
+divtag.append(ptag)
+
+
+var imgtag2=document.createElement("img")
+imgtag2.setAttribute("src",elem.investorCompanyLogo)
+divtag.append(imgtag2)
+
+
+
+
+
+
+
+
+});
+    
+
+
+</script>
